@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mtrek - Transformação</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+    <style type="text/css" scoped>
+        .mauticform-field-hidden {
+            display: none
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #3D113A 0%, #FF00ED 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-header fixed w-full z-50">
+        <div class="container px-4 lg:px-0 md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] mx-auto py-4 flex justify-between items-center">
+            <img src="./images/LOGO BRANCO MTREK.png" alt="Logo Mtrek" class="h-12">
+
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#beneficios" class="text-white hover:text-mtrek-lilac transition-colors">Benefícios</a>
+                <a href="#como-funciona" class="text-white hover:text-mtrek-lilac transition-colors">Como Funciona</a>
+                <a href="#faq" class="text-white hover:text-mtrek-lilac transition-colors">FAQ</a>
+                <button onclick="openPopup()" class="bg-white text-mtrek-dark-purple text-sm font-bold px-6 py-2 rounded-xl hover:bg-transparent hover:text-white hover:border-white border-2 transition-all duration-300">
+                    Quero Economizar
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-gradient min-h-screen flex items-center pt-20">
+            <div class="container mx-auto px-4 py-20">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-white animate__animated animate__fadeInLeft">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                            Transforme suas compras em <span class="text-mtrek-lilac">ganhos reais</span>
+                        </h1>
+                        <p class="text-xl mb-8 text-gray-200">
+                            Economize até 15% na conta de energia e ganhe cashback em todas as suas compras. 
+                            Faça parte da revolução que está transformando a vida de milhares de pessoas.
+                        </p>
+                        <button onclick="openPopup()" class="bg-white text-mtrek-dark-purple text-lg font-bold px-8 py-4 rounded-xl hover:bg-transparent hover:text-white hover:border-white border-2 transition-all duration-300 animate__animated animate__pulse animate__infinite">
+                            Quero Participar Agora
+                        </button>
+                    </div>
+                    <div class="animate__animated animate__fadeInRight">
+                        <img src="./assets/CAPA VÍDEO.jpg" alt="Mtrek" class="rounded-2xl shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Benefícios Exclusivos</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl card-hover">
+                        <div class="feature-icon">
+                            <svg class="w-8 h-8 text-mtrek-dark-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Economia na Energia</h3>
+                        <p class="text-gray-600">Reduza sua conta de energia em até 15% com nossa tecnologia exclusiva.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl card-hover">
+                        <div class="feature-icon">
+                            <svg class="w-8 h-8 text-mtrek-dark-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Cashback Triplicado</h3>
+                        <p class="text-gray-600">Receba cashback 3x maior em todas as suas compras e da sua rede.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl card-hover">
+                        <div class="feature-icon">
+                            <svg class="w-8 h-8 text-mtrek-dark-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Rede de Indicados</h3>
+                        <p class="text-gray-600">Ganhe comissões por cada pessoa que você indicar para a plataforma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-hero h-full px-4 pt-[40px] pb-[60px] text-center">
+            <div
+                class="container md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1100px] sm:w-3/4 lg:w-1/2 2xl:w-1/3 mx-auto">
+                <h2 class="text-2x1 sm:text-3xl md:text-4xl lg:text-4xl text-white font-bold mb-1">Lidere o Novo Jeito de.</h2>
+                <p class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-white font-bold mb-2">Economizar e Ganhar!
+                </p>
+
+                <p class="sm:text-sm md:text-base lg:text-sm m-auto text-xs font-normal text-white mb-8"><strong>Ganhe Acesso Exclusivo:</strong> Esteja à frente e faça parte da Mtrek, onde suas compras rendem mais. Economize na conta de energia em até 15% e ganhe em cada compra que você fizer.
+                </p>
+
+
+                <div class="video-container mt-10 mb-16">
+                    <!-- Imagem de capa -->
+                    <img class="rounded-xl" src="./assets/CAPA VÍDEO.jpg" alt="Imagem de Capa" id="thumbnail">
+
+                    <!-- Código de incorporação do YouTube (iframe) -->
+
+                    <iframe id="youtube-video" src="https://www.youtube.com/embed/p8ASfVQ7Jhw?si=9HYjSi6-z-b4I20U"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            
+
+        </section>
+                <button onclick="openPopup()" class="custom-button">
+                    <span class="button-text">Quero participar</span>
+                    <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+        <!-- O Popup -->
+        <div id="popup" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+            <div class="bg-white custom-shape rounded-t-[30px] rounded-b-[35px] shadow-lg max-w-md w-full relative">
+
+            <!-- Cabeçalho do Popup -->
+            <div class="bg-mtrek-right text-white px-8 py-3 rounded-t-lg flex justify-between items-center">
+                <h2 class="text-lg font-bold">Faça seu Cadastro</h2>
+                <button onclick="closePopup()" class="text-white hover:text-gray-300 text-2xl"><img class="w-6" src="./images/Fechar -216(1).png" alt=""></button>
+            </div>
+
+            <!-- Conteúdo do Formulário -->
+            <div class="p-6">
+                
+                <div id="mauticform_wrapper_formulariosejavipetransformeseufuturoagora" class="mauticform_wrapper px-10 py-2 bg-white">
+                    <h3 class="text-3xl text-mtrek-dark-purple font-extrabold mb-2">Seja VIP e Transforme Seu Futuro Agora!</h3>
+                    <p class="text-gray-600 mb-4">Preencha o formulário abaixo com seus dados válidos para participar do acesso vip.</p>
+
+                    <form autocomplete="false" role="form" method="post"
+                        action="https://mautic.mtrek.com.br/form/submit?formId=1"
+                        id="mauticform_formulariosejavipetransformeseufuturoagora"
+                        data-mautic-form="formulariosejavipetransformeseufuturoagora" enctype="multipart/form-data">
+                        <div class="mauticform-error"
+                            id="mauticform_formulariosejavipetransformeseufuturoagora_error"></div>
+                        <div class="mauticform-message"
+                            id="mauticform_formulariosejavipetransformeseufuturoagora_message"></div>
+
+                        <div class="mauticform-innerform">
+                            <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
+                                <div id="mauticform_formulariosejavipetransformeseufuturoagora_nome"
+                                    class="mauticform-row mauticform-text mauticform-field-1 mauticform-required"
+                                    data-validate="nome" data-validation-type="text">
+                                    <label id="mauticform_label_formulariosejavipetransformeseufuturoagora_nome"
+                                        for="mauticform_input_formulariosejavipetransformeseufuturoagora_nome"
+                                        class="mauticform-label">Nome Completo</label>
+
+                                    <input type="text" name="mauticform[nome]" value=""
+                                        id="mauticform_input_formulariosejavipetransformeseufuturoagora_nome"
+                                        class="mauticform-input">
+
+                                    <span class="mauticform-errormsg" style="display:none;">Esse campo é
+                                        obrigatório!</span>
+                                </div>
+
+                                <div id="mauticform_formulariosejavipetransformeseufuturoagora_email"
+                                    class="mauticform-row mauticform-email mauticform-field-2 mauticform-required"
+                                    data-validate="email" data-validation-type="email">
+                                    <label id="mauticform_label_formulariosejavipetransformeseufuturoagora_email"
+                                        for="mauticform_input_formulariosejavipetransformeseufuturoagora_email"
+                                        class="mauticform-label">E-mail</label>
+
+                                    <input type="email" name="mauticform[email]" value=""
+                                        id="mauticform_input_formulariosejavipetransformeseufuturoagora_email"
+                                        class="mauticform-input">
+
+                                    <span class="mauticform-errormsg" style="display:none;">Este campo é
+                                        obrigatório!</span>
+                                </div>
+
+                                <div id="mauticform_formulariosejavipetransformeseufuturoagora_whatsapp"
+                                    class="mauticform-row mauticform-tel mauticform-field-3 mauticform-required"
+                                    data-validate="whatsapp" data-validation-type="tel">
+                                    <label id="mauticform_label_formulariosejavipetransformeseufuturoagora_whatsapp"
+                                        for="mauticform_input_formulariosejavipetransformeseufuturoagora_whatsapp"
+                                        class="mauticform-label">WhatsApp</label>
+
+                                    <input type="tel" name="mauticform[whatsapp]" value=""
+                                        id="mauticform_input_formulariosejavipetransformeseufuturoagora_whatsapp"
+                                        class="mauticform-input">
+
+                                    <span class="mauticform-errormsg" style="display:none;">Este campo é
+                                        obrigatório!</span>
+                                </div>
+
+                                <div id="mauticform_formulariosejavipetransformeseufuturoagora_submit"
+                                    class="mauticform-row mauticform-button-wrapper mauticform-field-4 flex justify-center mx-auto">
+                                    <button class="bg-mtrek-dark-purple text-white text-base font-semibold lg:font-bold xl:font-bold border-2 px-14 py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-mtrek-dark-purple hover:border-mtrek-dark-purple transition-all duration-300" name="mauticform[submit]"
+                                        value="1"
+                                        id="mauticform_input_formulariosejavipetransformeseufuturoagora_submit"
+                                        type="submit">Enviar</button>
+                                </div>
+                            </div>
+                        </div><input type="hidden" name="mauticform[formId]"
+                            id="mauticform_formulariosejavipetransformeseufuturoagora_id" value="1">
+                        <input type="hidden" name="mauticform[return]"
+                            id="mauticform_formulariosejavipetransformeseufuturoagora_return" value="">
+                        <input type="hidden" name="mauticform[formName]"
+                            id="mauticform_formulariosejavipetransformeseufuturoagora_name"
+                            value="formulariosejavipetransformeseufuturoagora">
+
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <section id="form-section" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate__animated animate__fadeInLeft">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Não Perca Tempo!</h2>
+                        <p class="text-lg text-gray-600 mb-8">
+                            Entre para a nossa lista VIP e descubra antes de todos como transformar suas finanças. 
+                            Receba atualizações exclusivas, dicas valiosas e participe da revolução que está fazendo 
+                            a diferença na vida de muitos e você pode ser o próximo.
+                        </p>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 bg-mtrek-dark-purple rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-600">Cadastro rápido e seguro</p>
+                            </div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 bg-mtrek-dark-purple rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-600">Dados protegidos</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-mtrek-dark-purple rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-600">Acesso imediato</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate__animated animate__fadeInRight">
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                            <div class="bg-mtrek-dark-purple p-6">
+                                <h3 class="text-2xl text-white font-bold">Seja VIP e Transforme Seu Futuro Agora!</h3>
+                                <p class="text-gray-200 mt-2">Preencha o formulário abaixo com seus dados válidos para participar do acesso VIP.</p>
+                            </div>
+                            <div class="p-6">
+                                <!-- Formulário existente -->
+                                <div id="mauticform_wrapper_formulariosejavipetransformeseufuturoagora" class="mauticform_wrapper">
+                                    <div class="mauticform-error"
+                                        id="mauticform_formulariosejavipetransformeseufuturoagora_error"></div>
+                                    <div class="mauticform-message"
+                                        id="mauticform_formulariosejavipetransformeseufuturoagora_message"></div>
+
+                                    <div class="mauticform-innerform">
+                                        <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
+                                            <div id="mauticform_formulariosejavipetransformeseufuturoagora_nome"
+                                                class="mauticform-row mauticform-text mauticform-field-1 mauticform-required"
+                                                data-validate="nome" data-validation-type="text">
+                                                <label id="mauticform_label_formulariosejavipetransformeseufuturoagora_nome"
+                                                    for="mauticform_input_formulariosejavipetransformeseufuturoagora_nome"
+                                                    class="mauticform-label">Nome Completo</label>
+
+                                                <input type="text" name="mauticform[nome]" value=""
+                                                    id="mauticform_input_formulariosejavipetransformeseufuturoagora_nome"
+                                                    class="mauticform-input">
+
+                                                <span class="mauticform-errormsg" style="display:none;">Esse campo é
+                                                    obrigatório!</span>
+                                            </div>
+
+                                            <div id="mauticform_formulariosejavipetransformeseufuturoagora_email"
+                                                class="mauticform-row mauticform-email mauticform-field-2 mauticform-required"
+                                                data-validate="email" data-validation-type="email">
+                                                <label id="mauticform_label_formulariosejavipetransformeseufuturoagora_email"
+                                                    for="mauticform_input_formulariosejavipetransformeseufuturoagora_email"
+                                                    class="mauticform-label">E-mail</label>
+
+                                                <input type="email" name="mauticform[email]" value=""
+                                                    id="mauticform_input_formulariosejavipetransformeseufuturoagora_email"
+                                                    class="mauticform-input">
+
+                                                <span class="mauticform-errormsg" style="display:none;">Este campo é
+                                                    obrigatório!</span>
+                                            </div>
+
+                                            <div id="mauticform_formulariosejavipetransformeseufuturoagora_whatsapp"
+                                                class="mauticform-row mauticform-tel mauticform-field-3 mauticform-required"
+                                                data-validate="whatsapp" data-validation-type="tel">
+                                                <label id="mauticform_label_formulariosejavipetransformeseufuturoagora_whatsapp"
+                                                    for="mauticform_input_formulariosejavipetransformeseufuturoagora_whatsapp"
+                                                    class="mauticform-label">WhatsApp</label>
+
+                                                <input type="tel" name="mauticform[whatsapp]" value=""
+                                                    id="mauticform_input_formulariosejavipetransformeseufuturoagora_whatsapp"
+                                                    class="mauticform-input">
+
+                                                <span class="mauticform-errormsg" style="display:none;">Este campo é
+                                                    obrigatório!</span>
+                                            </div>
+
+                                            <div id="mauticform_formulariosejavipetransformeseufuturoagora_submit"
+                                                class="mauticform-row mauticform-button-wrapper mauticform-field-4 flex justify-center mx-auto">
+                                                <button class="bg-mtrek-dark-purple text-white text-base font-semibold lg:font-bold xl:font-bold border-2 px-14 py-2 rounded-xl text-lg font-extrabold hover:bg-transparent hover:text-mtrek-dark-purple hover:border-mtrek-dark-purple transition-all duration-300" name="mauticform[submit]"
+                                                    value="1"
+                                                    id="mauticform_input_formulariosejavipetransformeseufuturoagora_submit"
+                                                    type="submit">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </div><input type="hidden" name="mauticform[formId]"
+                                        id="mauticform_formulariosejavipetransformeseufuturoagora_id" value="1">
+                                    <input type="hidden" name="mauticform[return]"
+                                        id="mauticform_formulariosejavipetransformeseufuturoagora_return" value="">
+                                    <input type="hidden" name="mauticform[formName]"
+                                        id="mauticform_formulariosejavipetransformeseufuturoagora_name"
+                                        value="formulariosejavipetransformeseufuturoagora">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl text-black font-lato text-center mb-4">Perguntas Frequentes</h2>
+                <p class="text-black font-normal text-sm text-center mb-8">Está com alguma dúvida? Confira nosso FAQ ou entre em contato conosco.</p>
+
+                <div class="lg:w-3/4 mx-auto">
+                    <div class="space-y-4">
+                        <div>
+                            <button class="accordion-btn w-full text-left px-4 py-3 bg-white border-2 border-[#3D113A] rounded-[30px] text-white font-normal lg:font-semibold xl:font-semibold flex justify-between items-center transition-all duration-700 ease-in-out" onclick="toggleAccordion(this)">
+                                <span class="w-3/4">Como posso me tornar um membro VIP da Mtrek?</span>
+                                <svg class="accordion-icon bg-[#3D113A] text-white rounded-[30px] transform transition-transform duration-700 ease-in-out p-1 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content px-8 mt-3 text-black transition-all duration-700 ease-in-out">
+                                Para se tornar um membro VIP e garantir sua posição entre os primeiros a se cadastrar em nossa plataforma, basta preencher o formulário com seu e-mail e WhatsApp. Clique aqui e aproveite a oportunidade de ser um dos primeiros a usufruir de nossos benefícios, ganhar recompensas, economizar, e realizar seus sonhos dentro do nosso shopping virtual. Lembre-se, o passarinho que acorda cedo bebe água limpa!
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="accordion-btn w-full text-left px-4 py-3 bg-white border-2 border-[#3D113A] rounded-[30px] text-white font-normal lg:font-semibold xl:font-semibold flex justify-between items-center transition-all duration-700 ease-in-out" onclick="toggleAccordion(this)">
+                                <span class="w-3/4">Quanto tempo leva para começar a ver os resultados com a Mtrek?</span>
+                                <svg class="accordion-icon bg-[#3D113A] text-white rounded-[30px] transform transition-transform duration-700 ease-in-out p-1 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content px-8 mt-3 text-black transition-all duration-700 ease-in-out">
+                                Imediatamente. Os resultados começam a aparecer rapidamente. A economia na conta de energia pode ser percebida já no próximo mês de faturamento, enquanto o cashback nas suas compras é acumulado imediatamente após cada transação sua e de toda sua rede.
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="accordion-btn w-full text-left px-4 py-3 bg-white border-2 border-[#3D113A] rounded-[30px] text-white font-normal lg:font-semibold xl:font-semibold flex justify-between items-center transition-all duration-700 ease-in-out" onclick="toggleAccordion(this)">
+                                <span class="w-3/4">A Mtrek exige algum investimento inicial ou taxa?</span>
+                                <svg class="accordion-icon bg-[#3D113A] text-white rounded-[30px] transform transition-transform duration-700 ease-in-out p-1 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content px-8 mt-3 text-black transition-all duration-700 ease-in-out">
+                                Não, a Mtrek não exige nenhum investimento ou taxas ocultas. Nossa missão é oferecer economia e ganhos reais sem custos adicionais. Você paga apenas pelo consumo de energia, e os benefícios de cashback e economia são oferecidos sem comprometer seu orçamento.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gradient-to-r from-mtrek-dark-purple to-mtrek-lilac">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Contate o Atendimento Mtrek</h2>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <a href="https://whatsa.me/5519989326055" target="_blank" 
+                       class="bg-white text-mtrek-dark-purple px-8 py-4 rounded-xl font-bold hover:bg-transparent hover:text-white hover:border-white border-2 transition-all duration-300 flex items-center justify-center gap-3">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Atendimento via WhatsApp
+                    </a>
+                    <a href="mailto:mtrek.cashback@gmail.com" target="_blank"
+                       class="bg-white text-mtrek-dark-purple px-8 py-4 rounded-xl font-bold hover:bg-transparent hover:text-white hover:border-white border-2 transition-all duration-300 flex items-center justify-center gap-3">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Atendimento via E-mail
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-mtrek-dark-purple text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="text-center md:text-left">
+                    <img src="./images/LOGO BRANCO MTREK.png" alt="Logo Mtrek" class="h-16 mx-auto md:mx-0">
+                </div>
+                <div class="text-center">
+                    <p class="text-sm mb-2">Copyright 2024 Ⓒ Mtrek - Todos os direitos reservados</p>
+                    <p class="text-sm">Mtrek especializada em pagar Cashback 3x maior em todos os produtos e serviços que você e sua família consomem.</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <div class="flex justify-center md:justify-end gap-4 mb-4">
+                        <a href="https://www.youtube.com/@mtrek_oficial" target="_blank" class="hover:text-mtrek-lilac transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/mtrek_oficial" target="_blank" class="hover:text-mtrek-lilac transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/mtrek.comunidade" target="_blank" class="hover:text-mtrek-lilac transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-xs">Estabelecida como pessoa Jurídica através do marco regulatório das Startups.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html
